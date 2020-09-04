@@ -6,5 +6,17 @@ import "../assets/img/4geeks.ico";
 import "../style/index.scss";
 
 window.onload = function() {
-  console.log("Hello Rigo from the console!");
+  let pronoun = ["the", "our"];
+  let adj = ["great", "big"];
+  let noun = ["jogger", "racoon"];
+  let ext = [".io", ".com", ".org", ".net", ".co"];
+  let emptyString = "";
+  let emptyArray = [];
+  for (let a in pronoun)
+    for (let b in adj)
+      for (let c in noun)
+        for (let d in ext)
+          emptyString += pronoun[a] + adj[b] + noun[c] + ext[d] + "<br>";
+
+  document.querySelector("#the-domain").innerHTML = emptyString;
 };
